@@ -1,0 +1,98 @@
+/* line 3, ../sass/main.sass */
+.clearFloat, .inner::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+/* line 7, ../sass/main.sass */
+h3 {
+  margin-bottom: 1em;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* line 11, ../sass/main.sass */
+.bg-yellow, #buttons1 {
+  background: #ebc000;
+}
+
+/* line 13, ../sass/main.sass */
+.inner {
+  padding: 0 0 0 100px;
+}
+
+/* line 21, ../sass/main.sass */
+#buttons1 button {
+  display: block;
+  float: left;
+  width: 400px;
+  height: 80px;
+  margin: 0 10px 20px;
+  padding: 0;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  color: #ebc000;
+  background: white;
+  border: 0px solid #ae5e9b;
+  border-radius: 20px;
+}
+/* line 34, ../sass/main.sass */
+#buttons1 button:nth-child(n+9):nth-child(-n+12) {
+  position: relative;
+}
+/* line 36, ../sass/main.sass */
+#buttons1 button .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 43, ../sass/main.sass */
+#buttons1 button .bg span {
+  display: block;
+  width: 400px;
+  height: 80px;
+  line-height: 80px;
+  color: white;
+  background: #ae5e9b;
+  border-radius: 20px;
+}
+
+/* line 54, ../sass/main.sass */
+#images p {
+  position: relative;
+  overflow: hidden;
+}
+/* line 57, ../sass/main.sass */
+#images p strong {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 540px;
+  height: 30px;
+  padding-left: 2em;
+  line-height: 30px;
+  background: rgba(0, 0, 0, 0.1);
+}
+/* line 67, ../sass/main.sass */
+#images p span {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 580px;
+  height: 380px;
+  -webkit-box-shadow: inset 0 0 50px rgba(50, 30, 0, 0.6), inset 0 0 100px rgba(50, 30, 0, 0.3);
+  -moz-box-shadow: inset 0 0 50px rgba(50, 30, 0, 0.6), inset 0 0 100px rgba(50, 30, 0, 0.3);
+  box-shadow: inset 0 0 50px rgba(50, 30, 0, 0.6), inset 0 0 100px rgba(50, 30, 0, 0.3);
+  background: rgba(255, 155, 0, 0.2);
+  opacity: 0;
+}
+/* line 78, ../sass/main.sass */
+#images p:nth-child(1) strong {
+  opacity: 0;
+}

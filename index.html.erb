@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap 實作範例，以CKD官方網站為範例</title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/jquery-ui-1.11.3/jquery-ui.min.js"></script>
+	<!-- sample01 -->
+	<script>
+		$(document).ready(function(){
+			var duration = 300;
+			$('#buttons1 button:nth-child(-n+4)')
+				.on('mouseover', function(){
+					$(this).stop(true).animate({
+						backgroundColor: '#ae5e9b',
+						color: '#fff'
+					}, duration);
+				}).on('mouseout',function(){
+					$(this).stop(true).animate({
+						backgroundColor: '#fff',
+						color: '#ebc000'
+					})
+				});
+			$('#buttons1 button:nth-child(n+5):nth-child(-n+8)')
+				.on('mouseover', function(){
+					$(this).stop(true).animate({
+						borderWidth: '12px',
+						color: '#ae5e9b'
+					}, duration, 'easeOutSine');
+				})
+				.on('mouseout', function(){
+					$(this).animate({
+						borderWidth: '0px',
+						color: '#ebc000'
+					})
+				});
+			$('#buttons1 button:nth-child(n+9)')
+				.on('mouseover', function(){
+					$(this).find('>span').stop(true).animate({
+						width: '100%'
+					}, duration, 'easeOutQuad');
+				})
+				.on('mouseout', function(){
+					$(this).find('>span').stop(true).animate({
+						width: '0%'
+					}, duration, 'easeOutQuad');
+				});
+		});
+	</script>
+	<!-- sample02 -->
+	<script>
+	$(function(){
+		var duration = 300;
+		var $images = $('#images p');
+		$images.filter(':nth-child(1)')
+			.on('mouseover', function(){
+				$(this).stop(true).animate({
+
+				}, duration, "easeOutQuad");
+			})
+	});
+	</script>
+</head>
+<body>
+	<div class="row bg-gray">
+		<h3>[JQ] button 動畫效果</h3>
+	</div>
+	<div class="container-fluid page-main">
+		<div id="buttons1" class="row">
+			<h3>Buttons1</h3>
+			<div class="inner clearfix">
+				<button>click_1</button>
+				<button>click_2</button>
+				<button>click_3</button>
+				<button>click_4</button>
+				<button>click_5</button>
+				<button>click_6</button>
+				<button>click_7</button>
+				<button>click_8</button>
+				<button>click_9<span class="bg"><span>click_9</span></span></button>
+				<button>click_10<span class="bg"><span>click_10</span></span></button>
+				<button>click_11<span class="bg"><span>click_11</span></span></button>
+				<button>click_12<span class="bg"><span>click_12</span></span></button>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<h3>[JQ] img 圖片標題顯示</h3>
+	</div>
+	<div id="images" class="container-fluid  bg-yellow">
+		<h3>images</h3>
+		<div class="inner clearfix">
+			<p>
+				<img src="<%= lorem_image("540x380") %>" alt="imges01">
+				<strong>pick01</strong>
+				<span></span>
+			</p>
+			<p>
+				<img src="<%= lorem_image("540x380") %>" alt="imges01">
+				<strong>pick02</strong>
+				<span></span>
+			</p>
+			<p>
+				<img src="<%= lorem_image("540x380") %>" alt="imges01">
+				<strong>pick03</strong>
+				<span></span>
+			</p>
+		</div>
+		
+	</div>
+</body>
+</html>
