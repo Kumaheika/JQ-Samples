@@ -22,7 +22,7 @@ h3 {
   padding: 0 0 0 100px;
 }
 
-/* line 21, ../sass/main.sass */
+/* line 20, ../sass/main.sass */
 #buttons1 button {
   display: block;
   float: left;
@@ -37,11 +37,11 @@ h3 {
   border: 0px solid #ae5e9b;
   border-radius: 20px;
 }
-/* line 34, ../sass/main.sass */
+/* line 33, ../sass/main.sass */
 #buttons1 button:nth-child(n+9):nth-child(-n+12) {
   position: relative;
 }
-/* line 36, ../sass/main.sass */
+/* line 35, ../sass/main.sass */
 #buttons1 button .bg {
   position: absolute;
   top: 0;
@@ -50,7 +50,7 @@ h3 {
   height: 100%;
   overflow: hidden;
 }
-/* line 43, ../sass/main.sass */
+/* line 42, ../sass/main.sass */
 #buttons1 button .bg span {
   display: block;
   width: 400px;
@@ -61,12 +61,14 @@ h3 {
   border-radius: 20px;
 }
 
-/* line 54, ../sass/main.sass */
+/* line 53, ../sass/main.sass */
 #images p {
+  display: block;
   position: relative;
+  background: rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
-/* line 57, ../sass/main.sass */
+/* line 58, ../sass/main.sass */
 #images p strong {
   display: block;
   position: absolute;
@@ -77,14 +79,15 @@ h3 {
   padding-left: 2em;
   line-height: 30px;
   background: rgba(0, 0, 0, 0.1);
+  opacity: 0;
 }
-/* line 67, ../sass/main.sass */
+/* line 69, ../sass/main.sass */
 #images p span {
   display: block;
   position: absolute;
   top: 0;
   z-index: 0;
-  width: 580px;
+  width: 540px;
   height: 380px;
   -webkit-box-shadow: inset 0 0 50px rgba(50, 30, 0, 0.6), inset 0 0 100px rgba(50, 30, 0, 0.3);
   -moz-box-shadow: inset 0 0 50px rgba(50, 30, 0, 0.6), inset 0 0 100px rgba(50, 30, 0, 0.3);
@@ -92,7 +95,7 @@ h3 {
   background: rgba(255, 155, 0, 0.2);
   opacity: 0;
 }
-/* line 78, ../sass/main.sass */
-#images p:nth-child(1) strong {
-  opacity: 0;
+/* line 82, ../sass/main.sass */
+#images p:nth-child(2) strong {
+  left: -200%;
 }
