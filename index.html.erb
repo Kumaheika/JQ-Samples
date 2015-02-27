@@ -56,6 +56,8 @@
 	$(function(){
 		var duration = 300;
 		var $images = $('#images p:nth-child(1)');
+		var $images2 = $('#images p:nth-child(2)');
+		var $images3 = $('#images p:nth-child(3)');
 		//上面等於 var $images = $('#images p).filter(:nth-child(1)');
 		$images
 			.on('mouseover', function(){
@@ -68,7 +70,85 @@
 					opacity: 0
 				}, duration);
 			})
+		$images2
+			.on('mouseover', function(){
+				$(this).find('strong').stop(true).animate({
+					left: 0,
+					opacity: 1
+				}, duration);
+				$(this).find('span').stop(true).animate({
+					opacity: 1
+				}, duration);
+			})
+			.on('mouseout', function(){
+				$(this).find('strong, span').stop(true).animate({
+					left: '-200%',
+					opacity: 0
+				}, duration);
+				$(this).find('span').stop(true).animate({
+					opacity: 0
+				}, duration);
+			});
+		$images3
+			.on('mouseover', function(){
+				$(this).find('strong').stop(true).animate({
+					bottom: 0,
+					opacity: 1
+				}, duration);
+				$(this).find('span').stop(true).animate({
+					opacity: 1
+				}, duration);
+				$(this).find('img').stop(true).animate({
+					top: '-20px'
+				}, duration * 1.3);
+			})
+			.on('mouseout', function(){
+				$(this).find('strong, span').stop(true).animate({
+					bottom: '-40px',
+					opacity: 0
+				}, duration);
+				$(this).find('span').stop(true).animate({
+					opacity: 0
+				}, duration);
+				$(this).find('img').stop(true).animate({
+					top: 0
+				}, duration * 1.3);
+			});
 	});
+	</script>
+	<!-- sample03 -->
+	<script>
+		$(function(){
+			var duration = 300;
+			$('#buttons2 button').each(function(index){
+				var pos = index * 40 - 40;
+				$(this).css('top', pos);
+			})
+			.on('mouseover', function(){
+				var $btn = $(this).stop(true).animate({
+					backgroundColor: '#faee00',
+					color: '#000'
+				}, duration);
+				$btn.find('img:first-child').stop(true).animate({
+					opacity: 0
+				}, duration);
+				$btn.find('img:nth-child(2)').stop(true).animate({
+					opacity: 1
+				}, duration);
+			})
+			.on('mouseout', function(){
+				var $btn = $(this).stop(true).animate({
+					backgroundColor: '',
+					color: ''
+				}, duration);
+				$btn.find('img:first-child').stop(true).animate({
+					opacity: 1
+				}, duration);
+				$btn.find('img:nth-child(2)').stop(true).animate({
+					opacity: 0
+				}, duration);
+			});
+		});
 	</script>
 </head>
 <body>
@@ -98,7 +178,7 @@
 		<h3>[JQ] img 圖片標題顯示</h3>
 	</div>
 	<div id="images" class="container-fluid  bg-yellow">
-		<h3>images</h3>
+		<h3> hover 效果</h3>
 		<div class="inner clearfix">
 			<p>
 				<img src="<%= lorem_image("540x380") %>" alt="imges01">
@@ -116,7 +196,42 @@
 				<span></span>
 			</p>
 		</div>
-		
+	</div>
+	<div class="row">
+		<h3>[JQ] 圓形按鈕</h3>
+	</div>
+	<div id="buttons2">
+		<h3>nav hover</h3>
+		<div class="inner sample3">
+			<button>
+				<span>
+					<img src="images/01_nor.png" alt="01_nor">
+					<img src="images/01_bl.png" alt="01_bl"><br>
+					PickStyle 01
+				</span>
+			</button>
+			<button>
+				<span>
+					<img src="images/02_nor.png" alt="02_nor">
+					<img src="images/02_bl.png" alt="02_bl"><br>
+					PickStyle 02
+				</span>
+			</button>
+			<button>
+				<span>
+					<img src="images/03_nor.png" alt="03_nor">
+					<img src="images/03_bl.png" alt="03_bl"><br>
+					PickStyle 03
+				</span>
+			</button>
+			<button>
+				<span>
+					<img src="images/04_nor.png" alt="04_nor">
+					<img src="images/04_bl.png" alt="04_bl"><br>
+					PickStyle 04
+				</span>
+			</button>
+		</div>
 	</div>
 </body>
 </html>

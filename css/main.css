@@ -20,9 +20,10 @@ h3 {
 /* line 13, ../sass/main.sass */
 .inner {
   padding: 0 0 0 100px;
+  margin: 0 0 3em 0;
 }
 
-/* line 20, ../sass/main.sass */
+/* line 21, ../sass/main.sass */
 #buttons1 button {
   display: block;
   float: left;
@@ -37,11 +38,11 @@ h3 {
   border: 0px solid #ae5e9b;
   border-radius: 20px;
 }
-/* line 33, ../sass/main.sass */
+/* line 34, ../sass/main.sass */
 #buttons1 button:nth-child(n+9):nth-child(-n+12) {
   position: relative;
 }
-/* line 35, ../sass/main.sass */
+/* line 36, ../sass/main.sass */
 #buttons1 button .bg {
   position: absolute;
   top: 0;
@@ -50,7 +51,7 @@ h3 {
   height: 100%;
   overflow: hidden;
 }
-/* line 42, ../sass/main.sass */
+/* line 43, ../sass/main.sass */
 #buttons1 button .bg span {
   display: block;
   width: 400px;
@@ -61,27 +62,28 @@ h3 {
   border-radius: 20px;
 }
 
-/* line 53, ../sass/main.sass */
+/* line 54, ../sass/main.sass */
 #images p {
   display: block;
   position: relative;
-  background: rgba(0, 0, 0, 0.1);
+  float: left;
+  width: 33%;
   overflow: hidden;
 }
-/* line 58, ../sass/main.sass */
+/* line 61, ../sass/main.sass */
 #images p strong {
   display: block;
   position: absolute;
   bottom: 0;
   z-index: 1;
   width: 540px;
-  height: 30px;
+  height: 40px;
   padding-left: 2em;
-  line-height: 30px;
+  line-height: 40px;
   background: rgba(0, 0, 0, 0.1);
   opacity: 0;
 }
-/* line 69, ../sass/main.sass */
+/* line 72, ../sass/main.sass */
 #images p span {
   display: block;
   position: absolute;
@@ -95,7 +97,32 @@ h3 {
   background: rgba(255, 155, 0, 0.2);
   opacity: 0;
 }
-/* line 82, ../sass/main.sass */
+/* line 85, ../sass/main.sass */
 #images p:nth-child(2) strong {
   left: -200%;
+}
+/* line 88, ../sass/main.sass */
+#images p:nth-child(3) strong {
+  bottom: -40px;
+  background: #222222;
+}
+/* line 91, ../sass/main.sass */
+#images p:nth-child(3) img {
+  position: relative;
+  top: 0;
+}
+
+/* line 97, ../sass/main.sass */
+.sample3 button {
+  border: none !important;
+  background: white;
+}
+
+/* line 103, ../sass/main.sass */
+#buttons2 button img:first-child {
+  position: absolute;
+}
+/* line 105, ../sass/main.sass */
+#buttons2 button img:nth-child(2) {
+  opacity: 0;
 }

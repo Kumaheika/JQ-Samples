@@ -12,6 +12,7 @@ h3
   background: #ebc000
 .inner
   padding: 0 0 0 100px
+  margin: 0 0 3em 0
   &::after
     @extend .clearFloat
 // Sample 01
@@ -53,7 +54,9 @@ h3
   p
     display: block
     position: relative
-    background: rgba(0, 0, 0, .1)
+    float: left
+    width: 33%
+    // background: rgba(0, 0, 0, .1)
     overflow: hidden
     strong
       display: block
@@ -61,9 +64,9 @@ h3
       bottom: 0
       z-index: 1
       width: 540px
-      height: 30px
+      height: 40px
       padding-left: 2em
-      line-height: 30px
+      line-height: 40px
       background: rgba(0, 0, 0, .1)
       opacity: 0
     span
@@ -81,3 +84,23 @@ h3
     &:nth-child(2)
       strong
         left: -200%
+    &:nth-child(3)
+      strong
+        bottom: -40px
+        background: rgba(34, 34, 34, 1)
+      img
+        position: relative
+        top: 0
+
+//Sample 03
+.sample3
+  button
+    border: none !important
+    background: #fff
+#buttons2
+  button
+    img
+      &:first-child
+        position: absolute
+      &:nth-child(2)
+        opacity: 0
