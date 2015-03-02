@@ -358,3 +358,8 @@
 2015-03-02 12:46:45 overwrite css/main.css 
 2015-03-02 12:47:55 overwrite css/main.css 
 2015-03-02 12:48:03 overwrite css/main.css 
+2015-03-02 14:01:10 identical css/main.css 
+2015-03-02 14:02:44     error sass/main.sass (Line 137: Invalid CSS after "none": expected expression (e.g. 1px, bold), was ";")
+2015-03-02 14:02:44 overwrite css/main.css 
+2015-03-02 14:02:52 overwrite css/main.css 
+2015-03-02 17:47:02 identical css/main.css 

@@ -53,68 +53,76 @@
 	</script>
 	<!-- sample02 -->
 	<script>
-	$(function(){
-		var duration = 300;
-		var $images = $('#images p:nth-child(1)');
-		var $images2 = $('#images p:nth-child(2)');
-		var $images3 = $('#images p:nth-child(3)');
-		//上面等於 var $images = $('#images p).filter(:nth-child(1)');
-		$images
-			.on('mouseover', function(){
-				$(this).find('strong, span').stop(true).animate({
-					opacity: 1
-				}, duration);
-			})
-			.on('mouseout', function(){
-				$(this).find('strong, span').stop(true).animate({
-					opacity: 0
-				}, duration);
-			})
-		$images2
-			.on('mouseover', function(){
-				$(this).find('strong').stop(true).animate({
-					left: 0,
-					opacity: 1
-				}, duration);
-				$(this).find('span').stop(true).animate({
-					opacity: 1
-				}, duration);
-			})
-			.on('mouseout', function(){
-				$(this).find('strong, span').stop(true).animate({
-					left: '-200%',
-					opacity: 0
-				}, duration);
-				$(this).find('span').stop(true).animate({
-					opacity: 0
-				}, duration);
-			});
-		$images3
-			.on('mouseover', function(){
-				$(this).find('strong').stop(true).animate({
-					bottom: 0,
-					opacity: 1
-				}, duration);
-				$(this).find('span').stop(true).animate({
-					opacity: 1
-				}, duration);
-				$(this).find('img').stop(true).animate({
-					top: '-20px'
-				}, duration * 1.3);
-			})
-			.on('mouseout', function(){
-				$(this).find('strong, span').stop(true).animate({
-					bottom: '-40px',
-					opacity: 0
-				}, duration);
-				$(this).find('span').stop(true).animate({
-					opacity: 0
-				}, duration);
-				$(this).find('img').stop(true).animate({
-					top: 0
-				}, duration * 1.3);
-			});
-	});
+		$(function(){
+			var duration = 300;
+			var $images = $('#images p:nth-child(1)');
+			var $images2 = $('#images p:nth-child(2)');
+			var $images3 = $('#images p:nth-child(3)');
+
+			//上面等於 var $images = $('#images p').filter(':nth-child(1)');
+			$images
+				.on('mouseover', function(){
+					$(this).find('strong, span').stop(true).animate({
+						opacity: 1
+					}, duration);
+				})
+				.on('mouseout', function(){
+					$(this).find('strong, span').stop(true).animate({
+						opacity: 0
+					}, duration);
+				})
+			$images2
+				.on('mouseover', function(){
+					$(this).find('strong').stop(true).animate({
+						left: 0,
+						opacity: 1
+					}, duration);
+					$(this).find('span').stop(true).animate({
+						opacity: 1
+					}, duration);
+				})
+				.on('mouseout', function(){
+					$(this).find('strong, span').stop(true).animate({
+						left: '-200%',
+						opacity: 0
+					}, duration);
+					$(this).find('span').stop(true).animate({
+						opacity: 0
+					}, duration);
+				});
+			$images3
+				.on('mouseover', function(){
+					$(this).find('strong').stop(true).animate({
+						bottom: 0,
+						opacity: 1
+					}, duration);
+					$(this).find('span').stop(true).animate({
+						opacity: 1
+					}, duration);
+					$(this).find('img').stop(true).animate({
+						top: '-20px'
+					}, duration * 1.3);
+				})
+				.on('mouseout', function(){
+					$(this).find('strong, span').stop(true).animate({
+						bottom: '-40px',
+						opacity: 0
+					}, duration);
+					$(this).find('span').stop(true).animate({
+						opacity: 0
+					}, duration);
+					$(this).find('img').stop(true).animate({
+						top: 0
+					}, duration * 1.3);
+				});
+			$images3.gogogo;
+			function gogogo(){
+				$(this).on('mouseout', function(){
+					alert("NO");
+					$('html body').append('<div>lorem</div>');
+				})
+			}
+		});
 	</script>
 	<!-- sample03 -->
 	<script>

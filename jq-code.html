@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/jquery-ui-1.11.3/jquery-ui.min.js"></script>
+	<script>
+	$(function(){
+		var $test = $('ul li').filter('[alt=one]');
+		$test.css('background-color', 'red');
+		$test.on('mouseover', function(){
+			changeColor($(this));
+		});
+		function changeColor(index){
+			index.css('background-color', 'blue');
+		}
+	});
+	</script>
+</head>
+<body>
+	<ul>
+		<li alt="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vitae, architecto sed nobis tempore consequatur repellat veritatis eaque expedita quia sapiente exercitationem aliquam, voluptas esse molestiae incidunt hic tempora ab.</li>
+		<li class="li-style">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet saepe quasi voluptates cumque illo, suscipit atque, asperiores distinctio ullam? Vitae ut dolores illo atque laboriosam possimus, harum, facere iure quibusdam.</li>
+		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus est, fuga animi rem eveniet libero hic incidunt suscipit provident consequatur dolorem maiores, corporis quod minus nam inventore ea eum non.</li>
+	</ul>
+</body>
+</html>
