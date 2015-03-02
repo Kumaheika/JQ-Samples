@@ -99,8 +99,40 @@ h3
     background: #fff
 #buttons2
   button
+    position: relative
     img
       &:first-child
         position: absolute
       &:nth-child(2)
         opacity: 0
+
+//Sample4
+.aside-style
+  position: fixed
+  top: 0
+  left: -350px
+  width: 350px
+  height: 100vh
+  background: rgba(0, 0, 0, .8)
+  ul
+    position: absolute
+    top: 50px
+    left: 90px //-修改
+    margin: 0
+    padding: 0
+  li
+    margin: 0 0 20px
+    list-style-type: none
+  button
+    display: block
+    position: absolute
+    top: 150px
+    left: 350px
+    width: 52px
+    height: 132px
+    margin: 0
+    padding: 0
+    border: none
+    background: rgba(0, 0, 0, .8)
+    &:focus
+      border: none

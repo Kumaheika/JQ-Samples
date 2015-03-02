@@ -150,6 +150,28 @@
 			});
 		});
 	</script>
+	<!-- sample04 -->
+	<script>
+		$(function(){
+			var duration = 300;
+			var $aside = $('.aside-style');
+			var $asideButton = $aside.find('button');
+			$asideButton.on('click', function(){
+				$aside.toggleClass('open');
+				if($aside.hasClass('open')){
+					$aside.stop(true).animate({
+						left: '-70px'
+					}, duration, 'easeOutBack');
+					$asideButton.find('img').attr('src', 'images/close.png');
+				} else {
+					$aside.stop(true).animate({
+						left: '-350px'
+					}, duration, 'easeInBack');
+					$asideButton.find('img').attr('src', 'images/open.png');
+				};
+			});
+		});
+	</script>
 </head>
 <body>
 	<div class="row bg-gray">
@@ -233,5 +255,13 @@
 			</button>
 		</div>
 	</div>
+	<aside class="aside-style">
+		<ul>
+			<li><a href="#"><img src="<%= lorem_image("240x220") %>"></a></li>
+			<li><a href="#"><img src="<%= lorem_image("240x220") %>"></a></li>
+			<li><a href="#"><img src="<%= lorem_image("240x220") %>"></a></li>
+		</ul>
+		<button><img src="images/open.png"></button>
+	</aside>
 </body>
 </html>

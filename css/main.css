@@ -118,11 +118,55 @@ h3 {
   background: white;
 }
 
-/* line 103, ../sass/main.sass */
+/* line 101, ../sass/main.sass */
+#buttons2 button {
+  position: relative;
+}
+/* line 104, ../sass/main.sass */
 #buttons2 button img:first-child {
   position: absolute;
 }
-/* line 105, ../sass/main.sass */
+/* line 106, ../sass/main.sass */
 #buttons2 button img:nth-child(2) {
   opacity: 0;
+}
+
+/* line 110, ../sass/main.sass */
+.aside-style {
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 350px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 117, ../sass/main.sass */
+.aside-style ul {
+  position: absolute;
+  top: 50px;
+  left: 90px;
+  margin: 0;
+  padding: 0;
+}
+/* line 123, ../sass/main.sass */
+.aside-style li {
+  margin: 0 0 20px;
+  list-style-type: none;
+}
+/* line 126, ../sass/main.sass */
+.aside-style button {
+  display: block;
+  position: absolute;
+  top: 150px;
+  left: 350px;
+  width: 52px;
+  height: 132px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0.8);
+}
+/* line 137, ../sass/main.sass */
+.aside-style button:focus {
+  border: none;
 }
