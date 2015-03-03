@@ -1,0 +1,46 @@
+@import "compass/css3"
+//共用處
+.clearFloat //去 float
+  display: table
+  content: ' '
+  clear: both
+body
+  h3
+    margin-bottom: 1em
+    font-weight: 700
+    text-align: center
+    line-height: 3em
+.bg-yellow
+  background: #ebc000
+.inner
+  padding: 0 0 0 100px
+  margin: 0 0 3em 0
+  &::after
+    @extend .clearFloat
+// Sample-slide
+// .slideshow
+//   position: relative
+//   min-width: 960px
+//   height: 465px
+//   overflow: hidden
+//   img
+//     display: none
+//     position: absolute
+//     left: 50%
+//     margin-left: -800px
+// .no-js
+//   .slideshow
+//     img:first-child
+//       display: inline-block
+.slideshow
+  position: relative
+  width: auto
+  height: 465px
+  overflow: hidden
+  img
+    display: none
+    position: absolute
+    left: 50%
+    margin-left: -800px
+.no-js .slideshow img:first-child
+  display: inline-block

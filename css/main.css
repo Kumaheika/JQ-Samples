@@ -5,25 +5,26 @@
   clear: both;
 }
 
-/* line 7, ../sass/main.sass */
-h3 {
+/* line 8, ../sass/main.sass */
+body h3 {
   margin-bottom: 1em;
   font-weight: 700;
   text-align: center;
+  line-height: 3em;
 }
 
-/* line 11, ../sass/main.sass */
+/* line 13, ../sass/main.sass */
 .bg-yellow, #buttons1 {
   background: #ebc000;
 }
 
-/* line 13, ../sass/main.sass */
+/* line 15, ../sass/main.sass */
 .inner {
   padding: 0 0 0 100px;
   margin: 0 0 3em 0;
 }
 
-/* line 21, ../sass/main.sass */
+/* line 23, ../sass/main.sass */
 #buttons1 button {
   display: block;
   float: left;
@@ -38,11 +39,11 @@ h3 {
   border: 0px solid #ae5e9b;
   border-radius: 20px;
 }
-/* line 34, ../sass/main.sass */
+/* line 36, ../sass/main.sass */
 #buttons1 button:nth-child(n+9):nth-child(-n+12) {
   position: relative;
 }
-/* line 36, ../sass/main.sass */
+/* line 38, ../sass/main.sass */
 #buttons1 button .bg {
   position: absolute;
   top: 0;
@@ -51,7 +52,7 @@ h3 {
   height: 100%;
   overflow: hidden;
 }
-/* line 43, ../sass/main.sass */
+/* line 45, ../sass/main.sass */
 #buttons1 button .bg span {
   display: block;
   width: 400px;
@@ -62,7 +63,7 @@ h3 {
   border-radius: 20px;
 }
 
-/* line 54, ../sass/main.sass */
+/* line 56, ../sass/main.sass */
 #images p {
   display: block;
   position: relative;
@@ -70,7 +71,7 @@ h3 {
   width: 33%;
   overflow: hidden;
 }
-/* line 61, ../sass/main.sass */
+/* line 63, ../sass/main.sass */
 #images p strong {
   display: block;
   position: absolute;
@@ -83,7 +84,7 @@ h3 {
   background: rgba(0, 0, 0, 0.1);
   opacity: 0;
 }
-/* line 72, ../sass/main.sass */
+/* line 74, ../sass/main.sass */
 #images p span {
   display: block;
   position: absolute;
@@ -97,41 +98,41 @@ h3 {
   background: rgba(255, 155, 0, 0.2);
   opacity: 0;
 }
-/* line 85, ../sass/main.sass */
+/* line 87, ../sass/main.sass */
 #images p:nth-child(2) strong {
   left: -200%;
 }
-/* line 88, ../sass/main.sass */
+/* line 90, ../sass/main.sass */
 #images p:nth-child(3) strong {
   bottom: -40px;
   background: #222222;
 }
-/* line 91, ../sass/main.sass */
+/* line 93, ../sass/main.sass */
 #images p:nth-child(3) img {
   position: relative;
   top: 0;
 }
 
-/* line 97, ../sass/main.sass */
+/* line 99, ../sass/main.sass */
 .sample3 button {
   border: none !important;
   background: white;
 }
 
-/* line 101, ../sass/main.sass */
+/* line 103, ../sass/main.sass */
 #buttons2 button {
   position: relative;
 }
-/* line 104, ../sass/main.sass */
+/* line 106, ../sass/main.sass */
 #buttons2 button img:first-child {
   position: absolute;
 }
-/* line 106, ../sass/main.sass */
+/* line 108, ../sass/main.sass */
 #buttons2 button img:nth-child(2) {
   opacity: 0;
 }
 
-/* line 110, ../sass/main.sass */
+/* line 112, ../sass/main.sass */
 .aside-style {
   position: fixed;
   top: 0;
@@ -140,7 +141,7 @@ h3 {
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
 }
-/* line 117, ../sass/main.sass */
+/* line 119, ../sass/main.sass */
 .aside-style ul {
   position: absolute;
   top: 50px;
@@ -148,12 +149,12 @@ h3 {
   margin: 0;
   padding: 0;
 }
-/* line 123, ../sass/main.sass */
+/* line 125, ../sass/main.sass */
 .aside-style li {
   margin: 0 0 20px;
   list-style-type: none;
 }
-/* line 126, ../sass/main.sass */
+/* line 128, ../sass/main.sass */
 .aside-style button {
   display: block;
   position: absolute;
@@ -167,7 +168,16 @@ h3 {
   background: rgba(0, 0, 0, 0.8);
   outline: none;
 }
-/* line 138, ../sass/main.sass */
+/* line 140, ../sass/main.sass */
 .aside-style button:focus {
   border: none;
+}
+
+/* line 145, ../sass/main.sass */
+#typo .inner {
+  padding: 3em;
+  color: white;
+  font-size: 8em;
+  font-weight: 700;
+  text-align: center;
 }

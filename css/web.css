@@ -1,0 +1,45 @@
+/* line 3, ../sass/web.sass */
+.clearFloat, .inner::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+/* line 8, ../sass/web.sass */
+body h3 {
+  margin-bottom: 1em;
+  font-weight: 700;
+  text-align: center;
+  line-height: 3em;
+}
+
+/* line 13, ../sass/web.sass */
+.bg-yellow {
+  background: #ebc000;
+}
+
+/* line 15, ../sass/web.sass */
+.inner {
+  padding: 0 0 0 100px;
+  margin: 0 0 3em 0;
+}
+
+/* line 35, ../sass/web.sass */
+.slideshow {
+  position: relative;
+  width: auto;
+  height: 465px;
+  overflow: hidden;
+}
+/* line 40, ../sass/web.sass */
+.slideshow img {
+  display: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -800px;
+}
+
+/* line 45, ../sass/web.sass */
+.no-js .slideshow img:first-child {
+  display: inline-block;
+}

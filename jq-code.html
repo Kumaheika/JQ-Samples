@@ -3,27 +3,58 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="css/main.css">
+	<style>
+		body {
+		  padding: 1em;
+		}
+		li {
+		  cursor: pointer;
+		  padding: 1em;
+		  background: #ddd;
+		}
+		.li-style_er {
+		  background: DarkCyan;
+		}
+		.li-style_good {
+		  background: SteelBlue;
+		}
+		.li-style_test {
+			background: SandyBrown;
+		}
+	</style>
 	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/jquery-ui-1.11.3/jquery-ui.min.js"></script>
 	<script>
 	$(function(){
-		var $test = $('ul li').filter('[alt=one]');
-		$test.css('background-color', 'red');
-		$test.on('mouseover', function(){
-			changeColor($(this));
-		});
-		function changeColor(index){
-			index.css('background-color', 'blue');
-		}
+	  $('.li-style_er').on('click', function(){
+	    changeColor_error(); //我以為這樣就可以...但沒變色
+	  });
+	  $('.li-style_good').on('click', function(){
+	    changeColor_good($(this)); //結果要這樣才有變色
+	  });
+	  $('li-style_test').changeColor_test();
+	  
+	  function changeColor_error(){
+	    $(this).css('background-color', 'Brown');
+	  };
+	  function changeColor_good(index){
+	    index.css('background-color', 'Brown');
+	  };
+	  function changeColor_test(){
+	  	var mytag = $(this);
+	  	mytag.on('click', function(){
+	  		mytag.css('background-color', 'Brown');
+	  	});
+	  };
 	});
 	</script>
 </head>
 <body>
-	<ul>
-		<li alt="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta vitae, architecto sed nobis tempore consequatur repellat veritatis eaque expedita quia sapiente exercitationem aliquam, voluptas esse molestiae incidunt hic tempora ab.</li>
-		<li class="li-style">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet saepe quasi voluptates cumque illo, suscipit atque, asperiores distinctio ullam? Vitae ut dolores illo atque laboriosam possimus, harum, facere iure quibusdam.</li>
-		<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus est, fuga animi rem eveniet libero hic incidunt suscipit provident consequatur dolorem maiores, corporis quod minus nam inventore ea eum non.</li>
+	<ul class="ul-style">
+		<li class="li-style_er">list01-我以為點了應該會變色...</li>
+		<li class="li-style_good">list02-結果要這樣點了才會變色...</li>
+		<li class="li-style_test">list03 - 最終測試</li>
+		<li>list04</li>
 	</ul>
 </body>
 </html>

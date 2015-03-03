@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/jquery-ui-1.11.3/jquery-ui.min.js"></script>
+	<script src="js/jquery.typoshadow.js"></script>
 	<!-- sample01 -->
 	<script>
 		$(document).ready(function(){
@@ -180,6 +181,12 @@
 			});
 		});
 	</script>
+	<!-- sample05 -->
+	<script>
+		$(function(){
+			$('#typo').typoShadow();
+		});
+	</script>
 </head>
 <body>
 	<div class="row bg-gray">
@@ -271,5 +278,13 @@
 		</ul>
 		<button><img src="images/open.png"></button>
 	</aside>
+	<div class="row">
+		<h3>[JQ] typoshadow.js操作</h3>
+	</div>
+	<div class="container-fluid  bg-yellow">
+		<div id="typo">
+			<div class="inner">Creative Jquery</div>
+		</div>
+	</div>
 </body>
 </html>

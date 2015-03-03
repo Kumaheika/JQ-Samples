@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap 配合 JQ 範例</title>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/web.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/jquery-ui-1.11.3/jquery-ui.min.js"></script>
+	<!-- sample-slide -->
+	<!-- <script>
+		$(function(){
+			$('.slideshow').each(function(){
+				var $slides = $(this).find('img'), //.slideshow裡面所有的img
+				    slideCount = $slides.length, //img 的張數
+				    currentIndex = 0;
+				    //顯示第一張
+			    $slides.eq(currentIndex).fadeIn('slow');
+			    setInterval(showNextSlider, 3500);
+			    function showNextSlider(){
+			    	var nextIndex =(currentIndex+1) %  slideCount;
+			    	$slides.eq(currentIndex).fadeOut('fast');
+			    	$slides.eq(nextIndex).fadeIn('slow');
+			    	currentIndex = nextIndex;
+			    }
+			});
+		});
+	</script> -->
+	<script>
+		$(function(){
+			
+		});
+	</script>
+</head>
+<body>
+	<div class="container-fluid  bg-yellow">
+		<div class="slideshow">
+			<div class="slideshow-slides">
+				<a href="./" class="slide">
+					<img src="images/slide/slide-1.jpg" height="465" width="1600"></a>
+				<a href="./" class="slide">
+					<img src="images/slide/slide-2.jpg" height="465" width="1600"></a>
+				<a href="./" class="slide">
+					<img src="images/slide/slide-3.jpg" height="465" width="1600"></a>
+				<a href="./" class="slide">
+					<img src="images/slide/slide-4.jpg" height="465" width="1600"></a>
+			</div>
+			<div class="slideshow-nav">
+				<a href="#" class="prev">prev</a>
+				<a href="#" class="next">next</a>
+			</div>
+			<div class="slideshow-indicator">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
