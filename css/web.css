@@ -29,17 +29,94 @@ body h3 {
   position: relative;
   width: auto;
   height: 465px;
+  background: rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
-/* line 40, ../sass/web.sass */
-.slideshow img {
-  display: none;
+/* line 41, ../sass/web.sass */
+.slideshow .slideshow-slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* line 45, ../sass/web.sass */
+.slideshow .slideshow-slides .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 50, ../sass/web.sass */
+.slideshow .slideshow-slides .slide img {
   position: absolute;
   left: 50%;
   margin-left: -800px;
 }
-
-/* line 45, ../sass/web.sass */
-.no-js .slideshow img:first-child {
+/* line 54, ../sass/web.sass */
+.slideshow .slideshow-nav a::before,
+.slideshow .slideshow-indicator a::before {
+  content: url(../images/slide/sprites.png);
   display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
+/* line 60, ../sass/web.sass */
+.slideshow .slideshow-nav a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 72px;
+  height: 72px;
+  margin-top: -36px;
+  overflow: hidden;
+}
+/* line 68, ../sass/web.sass */
+.slideshow .slideshow-nav a.prev {
+  margin-left: -40%;
+}
+/* line 70, ../sass/web.sass */
+.slideshow .slideshow-nav a.prev::before {
+  margin-top: -20px;
+}
+/* line 72, ../sass/web.sass */
+.slideshow .slideshow-nav a.next {
+  margin-left: 35%;
+}
+/* line 74, ../sass/web.sass */
+.slideshow .slideshow-nav a.next::before {
+  margin-top: -20px;
+  margin-left: -80px;
+}
+/* line 77, ../sass/web.sass */
+.slideshow .slideshow-nav a.disabled {
+  display: none;
+}
+/* line 79, ../sass/web.sass */
+.slideshow .slideshow-indicator {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  left: 0;
+  height: 16px;
+  text-align: center;
+}
+/* line 86, ../sass/web.sass */
+.slideshow .slideshow-indicator a {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 3px;
+  margin-right: 3px;
+  overflow: hidden;
+}
+/* line 93, ../sass/web.sass */
+.slideshow .slideshow-indicator a::before {
+  margin-left: -110px;
+}
+/* line 95, ../sass/web.sass */
+.slideshow .slideshow-indicator a.active {
+  cursor: default;
+}
+/* line 97, ../sass/web.sass */
+.slideshow .slideshow-indicator a.active::before {
+  margin-left: -130px;
 }
